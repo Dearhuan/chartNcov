@@ -548,6 +548,8 @@ const renderResData = (params) => {
             value: ${(0, exports.dealWithNumber)(heal)},
           },
         ]
+      }
+    ]
   }
   
   var option_ch_now = {
@@ -651,7 +653,7 @@ const renderResData = (params) => {
         })
             .join('')}]},`;
     })
-        .join('')}{name: '南海诸岛', value: 0, addList: []}]
+        .join('')}{name: '南海诸岛', value: 0, addList: []}];
   
   var option_map = {
     title: {
