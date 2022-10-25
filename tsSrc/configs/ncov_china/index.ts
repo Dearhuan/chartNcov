@@ -575,6 +575,8 @@ export const renderResData = (params: ResUnion) => {
             value: ${dealWithNumber(heal)},
           },
         ]
+      }
+    ]
   }
   
   var option_ch_now = {
@@ -680,7 +682,7 @@ export const renderResData = (params: ResUnion) => {
         })
         .join('')}]},`
     })
-    .join('')}{name: '南海诸岛', value: 0, addList: []}]
+    .join('')}{name: '南海诸岛', value: 0, addList: []}];
   
   var option_map = {
     title: {
