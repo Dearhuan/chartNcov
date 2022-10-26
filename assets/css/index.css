@@ -204,6 +204,17 @@ body {
   width: 50vw;
 }
 
+.chart {
+  width: 100%;
+  height: 30vh;
+}
+#main2 {
+  height: 55vh;
+}
+#option_gd_mod2 {
+  height: 35vh;
+}
+
 @media (max-width: 719px) {
   body {
     height: auto;
@@ -215,15 +226,7 @@ body {
   #container .box {
     width: 100vw;
   }
-}
-
-.chart {
-  width: 100%;
-  height: 30vh;
-}
-#main2 {
-  height: 55vh;
-}
-#option_gd_mod2 {
-  height: 35vh;
+  .chart, #option_gd_mod2 {
+    height: 40vh;
+  }
 }
