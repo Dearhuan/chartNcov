@@ -183,6 +183,7 @@ body {
 }
 
 #container {
+  padding-top: 20px;
   display: flex;
   justify-content: space-around;
 }
@@ -191,16 +192,29 @@ body {
   height: 100%;
 }
 
-#container .box:nth-child(1) {
+.box:nth-child(1) {
   width: 25vw;
 }
 
-#container .box:nth-child(3) {
+.box:nth-child(3) {
   width: 25vw;
 }
 
-#container .box:nth-child(2) {
+.box:nth-child(2) {
   width: 50vw;
+}
+
+@media (max-width: 719px) {
+  body {
+    height: auto;
+    overflow: auto;
+  }
+  #container {
+    flex-direction: column;
+  }
+  #container .box {
+    width: 100vw;
+  }
 }
 
 .chart {
