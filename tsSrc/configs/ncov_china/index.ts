@@ -224,7 +224,10 @@ export const renderResData = (params: ResUnion) => {
         name: '本土确诊',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
           .map((x) => {
             return `${x.y1},`
@@ -235,7 +238,10 @@ export const renderResData = (params: ResUnion) => {
         name: '无症状感染',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
           .map((x) => {
             return `${x.y3},`
@@ -246,7 +252,10 @@ export const renderResData = (params: ResUnion) => {
         name: '新增境外输入',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
           .map((x) => {
             return `${x.y2},`
@@ -315,7 +324,10 @@ export const renderResData = (params: ResUnion) => {
         name: '本土新增确诊',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
           .map((x) => {
             return `${x.localAdd},`
@@ -326,7 +338,10 @@ export const renderResData = (params: ResUnion) => {
         name: '本土新增无症状',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
           .map((x) => {
             return `${x.asymptomAdd},`
@@ -337,7 +352,10 @@ export const renderResData = (params: ResUnion) => {
         name: '新增境外输入',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
           .map((x) => {
             return `${x.importAdd},`
@@ -402,7 +420,10 @@ export const renderResData = (params: ResUnion) => {
         name: '本土新增确诊',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${cityModifyHistory
           .map((x) => {
             return `${x.confirm},`
@@ -413,7 +434,10 @@ export const renderResData = (params: ResUnion) => {
         name: '本土新增无症状',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${cityModifyHistory
           .map((x) => {
             return `${x.noinfect},`
@@ -635,7 +659,10 @@ export const renderResData = (params: ResUnion) => {
         name: '本土确诊',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
           .map((x) => {
             return `${x.y1},`
@@ -646,7 +673,10 @@ export const renderResData = (params: ResUnion) => {
         name: '无症状感染',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
           .map((x) => {
             return `${x.y3},`
@@ -657,7 +687,10 @@ export const renderResData = (params: ResUnion) => {
         name: '新增境外输入',
         type: 'line',
         stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
           .map((x) => {
             return `${x.y2},`
@@ -748,3 +781,10 @@ export const renderResData = (params: ResUnion) => {
 
   writeMdWithContent(name, content)
 }
+
+
+
+
+
+
+
