@@ -51,17 +51,6 @@ const { GuangDongProvinceCode, GuangZhouCityCode } = BaseApiInfo
     }
   )
 
-  // 城市信息
-  const params_cityInfoByProvCode = URL_Object['getCityInfoByProvCode']
-  const res_cityList = await getApiData<CityRes>(
-    params_cityInfoByProvCode['url'],
-    {
-      req: { provinceCode: GuangDongProvinceCode },
-      func: params_cityInfoByProvCode['func'],
-      service: params_cityInfoByProvCode['service']
-    }
-  )
-
   // 省份趋势信息
   const params_provinceInfoHisByCode = URL_Object['getProvinceInfoHisByCode']
   const res_trendInfo = await getApiData<TrendInfoRes>(
@@ -84,24 +73,6 @@ const { GuangDongProvinceCode, GuangZhouCityCode } = BaseApiInfo
     }
   )
 
-  // 城市新闻消息
-  const params_topicContent = URL_Object['getTopicContent']
-  const res_news = await getApiData<ContentsRes>(params_topicContent['url'], {
-    req: {
-      areaCode: GuangDongProvinceCode,
-      hotnewsReq: {
-        limit: 10,
-        locationCode: GuangDongProvinceCode,
-        offset: 0,
-        reqType: 1,
-        tab: 'shishitongbao'
-      },
-      queryList: [{}]
-    },
-    func: params_topicContent['func'],
-    service: params_topicContent['service']
-  })
-
   // 趋势图表信息
   const params_trendChartInfo = URL_Object['getChartInfo']
   const res_chartInfo = await getApiData<TrendChartInfoRes>(
@@ -117,10 +88,8 @@ const { GuangDongProvinceCode, GuangZhouCityCode } = BaseApiInfo
     provinceMapInfo: res_provinceMapInfo.args.rsp,
     chinaRealTimeInfo: res.args.rsp,
     provinceInfos: res_province.args.rsp,
-    cityRes: res_cityList.args.rsp,
     trendInfoRes: res_trendInfo.args.rsp,
     cityTrendRes: res_cityTrendInfo.args.rsp,
-    contentsRes: res_news.args.rsp,
     trendChartInfoRes: res_chartInfo.args.rsp
   }
 

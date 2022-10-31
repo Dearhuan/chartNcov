@@ -24,13 +24,6 @@ const { GuangDongProvinceCode, GuangZhouCityCode } = ncov_china_1.BaseApiInfo;
         func: params_provinceInfoByCode['func'],
         service: params_provinceInfoByCode['service']
     });
-    // 城市信息
-    const params_cityInfoByProvCode = ncov_china_1.URL_Object['getCityInfoByProvCode'];
-    const res_cityList = await (0, ncov_china_1.getApiData)(params_cityInfoByProvCode['url'], {
-        req: { provinceCode: GuangDongProvinceCode },
-        func: params_cityInfoByProvCode['func'],
-        service: params_cityInfoByProvCode['service']
-    });
     // 省份趋势信息
     const params_provinceInfoHisByCode = ncov_china_1.URL_Object['getProvinceInfoHisByCode'];
     const res_trendInfo = await (0, ncov_china_1.getApiData)(params_provinceInfoHisByCode['url'], {
@@ -45,23 +38,6 @@ const { GuangDongProvinceCode, GuangZhouCityCode } = ncov_china_1.BaseApiInfo;
         func: params_cityInfoHisByCode['func'],
         service: params_cityInfoHisByCode['service']
     });
-    // 城市新闻消息
-    const params_topicContent = ncov_china_1.URL_Object['getTopicContent'];
-    const res_news = await (0, ncov_china_1.getApiData)(params_topicContent['url'], {
-        req: {
-            areaCode: GuangDongProvinceCode,
-            hotnewsReq: {
-                limit: 10,
-                locationCode: GuangDongProvinceCode,
-                offset: 0,
-                reqType: 1,
-                tab: 'shishitongbao'
-            },
-            queryList: [{}]
-        },
-        func: params_topicContent['func'],
-        service: params_topicContent['service']
-    });
     // 趋势图表信息
     const params_trendChartInfo = ncov_china_1.URL_Object['getChartInfo'];
     const res_chartInfo = await (0, ncov_china_1.getApiData)(params_trendChartInfo['url'], {
@@ -73,10 +49,8 @@ const { GuangDongProvinceCode, GuangZhouCityCode } = ncov_china_1.BaseApiInfo;
         provinceMapInfo: res_provinceMapInfo.args.rsp,
         chinaRealTimeInfo: res.args.rsp,
         provinceInfos: res_province.args.rsp,
-        cityRes: res_cityList.args.rsp,
         trendInfoRes: res_trendInfo.args.rsp,
         cityTrendRes: res_cityTrendInfo.args.rsp,
-        contentsRes: res_news.args.rsp,
         trendChartInfoRes: res_chartInfo.args.rsp
     };
     (0, ncov_china_1.renderResData)(resData);

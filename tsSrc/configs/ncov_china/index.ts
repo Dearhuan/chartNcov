@@ -5,7 +5,7 @@ import { ChartName } from './enums'
 import type {
   ApiRequestParams,
   Result,
-  ResUnion
+  ChartNcovResUnion
 } from './types'
 
 export const rootPath = path.resolve(__dirname, '../../../')
@@ -117,7 +117,7 @@ export const dealWithNumber = (number: number | string) => {
   return number > 0 ? number : 1
 }
 
-export const renderResData = (params: ResUnion) => {
+export const renderResData = (params: ChartNcovResUnion) => {
   const {
     provinceMapInfo,
     chinaRealTimeInfo,
@@ -131,7 +131,6 @@ export const renderResData = (params: ResUnion) => {
 
   const {
     chinaDayModify,
-    recentTime, // 更新时间
   } = chinaRealTimeInfo
   const {
     localConfirmAdd, // 本土新增确诊

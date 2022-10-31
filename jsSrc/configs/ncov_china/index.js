@@ -112,8 +112,7 @@ exports.dealWithNumber = dealWithNumber;
 const renderResData = (params) => {
     const { provinceMapInfo, chinaRealTimeInfo, provinceInfos, trendInfoRes, cityTrendRes, trendChartInfoRes } = params;
     const { provinceMapData } = provinceMapInfo;
-    const { chinaDayModify, recentTime, // 更新时间
-     } = chinaRealTimeInfo;
+    const { chinaDayModify, } = chinaRealTimeInfo;
     const { localConfirmAdd, // 本土新增确诊
     noinfect, // 新增无症状
     importDesc, // 新增境外输入

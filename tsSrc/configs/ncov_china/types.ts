@@ -159,3 +159,5 @@ export interface ResUnion {
   contentsRes: ContentsRes
   trendChartInfoRes: TrendChartInfoRes
 }
+
+export type ChartNcovResUnion = Omit<ResUnion, 'cityRes' | 'contentsRes'>
