@@ -148,7 +148,7 @@ export const renderResData = (params: ChartNcovResUnion) => {
     lastImportAddTotal, // 本土近7日确诊
   } = provinceInfo
 
-  const gdRate = localAddPctDesc.slice(localAddPctDesc.indexOf('占全国') + 3).replace('%','')
+  const gdRate = localAddPctDesc.slice(localAddPctDesc.indexOf('占全国') + 3).replace('%', '')
 
   const { modifyHistory } = trendInfoRes
 
@@ -210,10 +210,10 @@ export const renderResData = (params: ChartNcovResUnion) => {
       type: 'category',
       boundaryGap: false,
       data: [${chinaAddHistoryData
-        .map((x) => {
-          return `"${x.x}",`
-        })
-        .join('')}]
+      .map((x) => {
+        return `"${x.x}",`
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -222,35 +222,41 @@ export const renderResData = (params: ChartNcovResUnion) => {
       {
         name: '本土确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
-          .map((x) => {
-            return `${x.y1},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.y1},`
+      })
+      .join('')}]
       },
       {
         name: '无症状感染',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
-          .map((x) => {
-            return `${x.y3},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.y3},`
+      })
+      .join('')}]
       },
       {
         name: '新增境外输入',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
-          .map((x) => {
-            return `${x.y2},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.y2},`
+      })
+      .join('')}]
       }
     ]
   };
@@ -301,10 +307,10 @@ export const renderResData = (params: ChartNcovResUnion) => {
       type: 'category',
       boundaryGap: false,
       data: [${modifyHistory
-        .map((x) => {
-          return `"${x.day}",`
-        })
-        .join('')}]
+      .map((x) => {
+        return `"${x.day}",`
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -313,35 +319,41 @@ export const renderResData = (params: ChartNcovResUnion) => {
       {
         name: '本土新增确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
-          .map((x) => {
-            return `${x.localAdd},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.localAdd},`
+      })
+      .join('')}]
       },
       {
         name: '本土新增无症状',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
-          .map((x) => {
-            return `${x.asymptomAdd},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.asymptomAdd},`
+      })
+      .join('')}]
       },
       {
         name: '新增境外输入',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
-          .map((x) => {
-            return `${x.importAdd},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.importAdd},`
+      })
+      .join('')}]
       }
     ]
   }
@@ -388,10 +400,10 @@ export const renderResData = (params: ChartNcovResUnion) => {
       type: 'category',
       boundaryGap: false,
       data: [${cityModifyHistory
-        .map((x) => {
-          return `"${x.day.slice(4)}",`
-        })
-        .join('')}]
+      .map((x) => {
+        return `"${x.day.slice(4)}",`
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -400,24 +412,28 @@ export const renderResData = (params: ChartNcovResUnion) => {
       {
         name: '本土新增确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${cityModifyHistory
-          .map((x) => {
-            return `${x.confirm},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.confirm},`
+      })
+      .join('')}]
       },
       {
         name: '本土新增无症状',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${cityModifyHistory
-          .map((x) => {
-            return `${x.noinfect},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.noinfect},`
+      })
+      .join('')}]
       }
     ]
   }
@@ -617,19 +633,14 @@ export const renderResData = (params: ChartNcovResUnion) => {
       bottom: '3%',
       containLabel: true
     },
-    toolbox: {
-      feature: {
-        saveAsImage: {}
-      }
-    },
     xAxis: {
       type: 'category',
       boundaryGap: false,
       data: [${chinaNowHistoryData
-        .map((x) => {
-          return `"${x.x}",`
-        })
-        .join('')}]
+      .map((x) => {
+        return `"${x.x}",`
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -638,50 +649,55 @@ export const renderResData = (params: ChartNcovResUnion) => {
       {
         name: '本土确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
-          .map((x) => {
-            return `${x.y1},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.y1},`
+      })
+      .join('')}]
       },
       {
         name: '无症状感染',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
-          .map((x) => {
-            return `${x.y3},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.y3},`
+      })
+      .join('')}]
       },
       {
         name: '新增境外输入',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
-          .map((x) => {
-            return `${x.y2},`
-          })
-          .join('')}]
+      .map((x) => {
+        return `${x.y2},`
+      })
+      .join('')}]
       }
     ]
   }
   
   var mapDatas = [${provinceMapData
-    .map((x) => {
-      return `{name: '${x.name.replace('省', '')}', value: ${
-        x.localAdd
-      }, addList: [${x.localAddCityData
-        .map((a) => {
-          return `{name: '${a.name}', num: ${a.num}},`
-        })
-        .join('')}]},`
-    })
-    .join('')}{name: '南海诸岛', value: 0, addList: []}];
+      .map((x) => {
+        return `{name: '${x.name.replace('省', '')}', value: ${x.localAdd
+          }, addList: [${x.localAddCityData
+            .map((a) => {
+              return `{name: '${a.name}', num: ${a.num}},`
+            })
+            .join('')}]},`
+      })
+      .join('')}{name: '南海诸岛', value: 0, addList: []}];
   
   var option_map = {
     title: {
@@ -752,3 +768,10 @@ export const renderResData = (params: ChartNcovResUnion) => {
 
   writeMdWithContent(name, content)
 }
+
+
+
+
+
+
+

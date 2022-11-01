@@ -1,6 +1,6 @@
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.renderResData = exports.dealWithNumber = exports.getApiData = exports.writeMdWithContent = exports.URL_Object = exports.BaseUrl = exports.BaseApiInfo = exports.mdPath = exports.rootPath = void 0;
@@ -11,65 +11,65 @@ const enums_1 = require("./enums");
 exports.rootPath = path_1.default.resolve(__dirname, '../../../');
 exports.mdPath = exports.rootPath + '/assets/js';
 exports.BaseApiInfo = {
-    GuangDongProvinceCode: '440000',
-    GuangZhouCityCode: '440100',
-    BASE_URL: 'https://wechat.wecity.qq.com/api/',
-    SERVICE: 'THPneumoniaDataService',
-    OUTER_SERVICE: 'THPneumoniaOuterService',
-    OUTER_DATA_SERVICE: 'THPneumoniaOuterDataService',
-    USERID: '830075f3162e41c89a790c70041cd031'
+  GuangDongProvinceCode: '440000',
+  GuangZhouCityCode: '440100',
+  BASE_URL: 'https://wechat.wecity.qq.com/api/',
+  SERVICE: 'THPneumoniaDataService',
+  OUTER_SERVICE: 'THPneumoniaOuterService',
+  OUTER_DATA_SERVICE: 'THPneumoniaOuterDataService',
+  USERID: '830075f3162e41c89a790c70041cd031'
 };
 exports.BaseUrl = {
-    GetChinaRealTimeInfoURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getChinaRealTimeInfo`,
-    GetProvinceInfoByCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getProvinceInfoByCode`,
-    GetCityInfoByProvCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getCityInfoByProvCode`,
-    GetProvinceInfoHisByCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getProvinceInfoHisByCode`,
-    GetCityInfoHisByCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getCityInfoHisByCode`,
-    GetTopicContentURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.OUTER_SERVICE}/getTopicContent`,
-    GetChartInfoURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.OUTER_DATA_SERVICE}/getChartInfo`,
-    GetProvinceMapInfoURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getProvinceMapInfo`
+  GetChinaRealTimeInfoURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getChinaRealTimeInfo`,
+  GetProvinceInfoByCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getProvinceInfoByCode`,
+  GetCityInfoByProvCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getCityInfoByProvCode`,
+  GetProvinceInfoHisByCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getProvinceInfoHisByCode`,
+  GetCityInfoHisByCodeURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getCityInfoHisByCode`,
+  GetTopicContentURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.OUTER_SERVICE}/getTopicContent`,
+  GetChartInfoURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.OUTER_DATA_SERVICE}/getChartInfo`,
+  GetProvinceMapInfoURL: `${exports.BaseApiInfo.BASE_URL}${exports.BaseApiInfo.SERVICE}/getProvinceMapInfo`
 };
 exports.URL_Object = {
-    getChinaRealTimeInfo: {
-        func: 'getChinaRealTimeInfo',
-        service: exports.BaseApiInfo.SERVICE,
-        url: exports.BaseUrl.GetChinaRealTimeInfoURL
-    },
-    getProvinceInfoByCode: {
-        func: 'getProvinceInfoByCode',
-        service: exports.BaseApiInfo.SERVICE,
-        url: exports.BaseUrl.GetProvinceInfoByCodeURL
-    },
-    getCityInfoByProvCode: {
-        func: 'getCityInfoByProvCode',
-        service: exports.BaseApiInfo.SERVICE,
-        url: exports.BaseUrl.GetCityInfoByProvCodeURL
-    },
-    getProvinceInfoHisByCode: {
-        func: 'getProvinceInfoHisByCode',
-        service: exports.BaseApiInfo.SERVICE,
-        url: exports.BaseUrl.GetProvinceInfoHisByCodeURL
-    },
-    getCityInfoHisByCode: {
-        func: 'getCityInfoHisByCode',
-        service: exports.BaseApiInfo.SERVICE,
-        url: exports.BaseUrl.GetCityInfoHisByCodeURL
-    },
-    getTopicContent: {
-        func: 'getTopicContent',
-        service: exports.BaseApiInfo.OUTER_SERVICE,
-        url: exports.BaseUrl.GetTopicContentURL
-    },
-    getChartInfo: {
-        func: 'getChartInfo',
-        service: exports.BaseApiInfo.OUTER_DATA_SERVICE,
-        url: exports.BaseUrl.GetChartInfoURL
-    },
-    getProvinceMapInfo: {
-        func: 'getProvinceMapInfo',
-        service: exports.BaseApiInfo.SERVICE,
-        url: exports.BaseUrl.GetProvinceMapInfoURL
-    }
+  getChinaRealTimeInfo: {
+    func: 'getChinaRealTimeInfo',
+    service: exports.BaseApiInfo.SERVICE,
+    url: exports.BaseUrl.GetChinaRealTimeInfoURL
+  },
+  getProvinceInfoByCode: {
+    func: 'getProvinceInfoByCode',
+    service: exports.BaseApiInfo.SERVICE,
+    url: exports.BaseUrl.GetProvinceInfoByCodeURL
+  },
+  getCityInfoByProvCode: {
+    func: 'getCityInfoByProvCode',
+    service: exports.BaseApiInfo.SERVICE,
+    url: exports.BaseUrl.GetCityInfoByProvCodeURL
+  },
+  getProvinceInfoHisByCode: {
+    func: 'getProvinceInfoHisByCode',
+    service: exports.BaseApiInfo.SERVICE,
+    url: exports.BaseUrl.GetProvinceInfoHisByCodeURL
+  },
+  getCityInfoHisByCode: {
+    func: 'getCityInfoHisByCode',
+    service: exports.BaseApiInfo.SERVICE,
+    url: exports.BaseUrl.GetCityInfoHisByCodeURL
+  },
+  getTopicContent: {
+    func: 'getTopicContent',
+    service: exports.BaseApiInfo.OUTER_SERVICE,
+    url: exports.BaseUrl.GetTopicContentURL
+  },
+  getChartInfo: {
+    func: 'getChartInfo',
+    service: exports.BaseApiInfo.OUTER_DATA_SERVICE,
+    url: exports.BaseUrl.GetChartInfoURL
+  },
+  getProvinceMapInfo: {
+    func: 'getProvinceMapInfo',
+    service: exports.BaseApiInfo.SERVICE,
+    url: exports.BaseUrl.GetProvinceMapInfoURL
+  }
 };
 /**
  * @func writeMdWithContent
@@ -78,9 +78,9 @@ exports.URL_Object = {
  * @desc 写入md文件并更新路由
  */
 const writeMdWithContent = (name, content) => {
-    const writePath = `${exports.mdPath}/${name}.js`;
-    fs_1.default.writeFileSync(writePath, content, 'utf-8');
-    console.log(`${name}.js created.`);
+  const writePath = `${exports.mdPath}/${name}.js`;
+  fs_1.default.writeFileSync(writePath, content, 'utf-8');
+  console.log(`${name}.js created.`);
 };
 exports.writeMdWithContent = writeMdWithContent;
 /**
@@ -91,51 +91,51 @@ exports.writeMdWithContent = writeMdWithContent;
  * @desc 接口统一处理
  */
 const getApiData = async (url, params) => {
-    const { req, service, func } = params;
-    const res = await axios_1.default.post(url, {
-        args: {
-            req
-        },
-        service,
-        func,
-        context: {
-            userId: exports.BaseApiInfo.USERID
-        }
-    });
-    return res.data;
+  const { req, service, func } = params;
+  const res = await axios_1.default.post(url, {
+    args: {
+      req
+    },
+    service,
+    func,
+    context: {
+      userId: exports.BaseApiInfo.USERID
+    }
+  });
+  return res.data;
 };
 exports.getApiData = getApiData;
 const dealWithNumber = (number) => {
-    return number > 0 ? number : 1;
+  return number > 0 ? number : 1;
 };
 exports.dealWithNumber = dealWithNumber;
 const renderResData = (params) => {
-    const { provinceMapInfo, chinaRealTimeInfo, provinceInfos, trendInfoRes, cityTrendRes, trendChartInfoRes } = params;
-    const { provinceMapData } = provinceMapInfo;
-    const { chinaDayModify, } = chinaRealTimeInfo;
-    const { localConfirmAdd, // 本土新增确诊
+  const { provinceMapInfo, chinaRealTimeInfo, provinceInfos, trendInfoRes, cityTrendRes, trendChartInfoRes } = params;
+  const { provinceMapData } = provinceMapInfo;
+  const { chinaDayModify, } = chinaRealTimeInfo;
+  const { localConfirmAdd, // 本土新增确诊
     noinfect, // 新增无症状
     importDesc, // 新增境外输入
     heal // 新增治愈
-     } = chinaDayModify;
-    const { provinceInfo } = provinceInfos;
-    const { localAddPctDesc, // 描述
+  } = chinaDayModify;
+  const { provinceInfo } = provinceInfos;
+  const { localAddPctDesc, // 描述
     localAdd, // 本土新增确诊
     asymptomAdd, // 本土新增无症状
     importAdd, // 新增境外输入
     lastImportAddTotal, // 本土近7日确诊
-     } = provinceInfo;
-    const gdRate = localAddPctDesc.slice(localAddPctDesc.indexOf('占全国') + 3).replace('%', '');
-    const { modifyHistory } = trendInfoRes;
-    const { modifyHistory: cityModifyHistory } = cityTrendRes;
-    const { trendChartInfo } = trendChartInfoRes;
-    const chinaAddHistoryData = trendChartInfo.filter((x) => {
-        return x.chartName === enums_1.ChartName.CH_ADD_HISTORY;
-    })[0].chartLineData;
-    const chinaNowHistoryData = trendChartInfo.filter((x) => {
-        return x.chartName === enums_1.ChartName.CH_NOW_HISTORY;
-    })[0].chartLineData;
-    const content = `
+  } = provinceInfo;
+  const gdRate = localAddPctDesc.slice(localAddPctDesc.indexOf('占全国') + 3).replace('%', '');
+  const { modifyHistory } = trendInfoRes;
+  const { modifyHistory: cityModifyHistory } = cityTrendRes;
+  const { trendChartInfo } = trendChartInfoRes;
+  const chinaAddHistoryData = trendChartInfo.filter((x) => {
+    return x.chartName === enums_1.ChartName.CH_ADD_HISTORY;
+  })[0].chartLineData;
+  const chinaNowHistoryData = trendChartInfo.filter((x) => {
+    return x.chartName === enums_1.ChartName.CH_NOW_HISTORY;
+  })[0].chartLineData;
+  const content = `
   // 指定图表的配置项和数据
   var option_ch_add = {
     title: {
@@ -183,10 +183,10 @@ const renderResData = (params) => {
       type: 'category',
       boundaryGap: false,
       data: [${chinaAddHistoryData
-        .map((x) => {
+      .map((x) => {
         return `"${x.x}",`;
-    })
-        .join('')}]
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -195,35 +195,41 @@ const renderResData = (params) => {
       {
         name: '本土确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
-        .map((x) => {
+      .map((x) => {
         return `${x.y1},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       },
       {
         name: '无症状感染',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
-        .map((x) => {
+      .map((x) => {
         return `${x.y3},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       },
       {
         name: '新增境外输入',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaAddHistoryData
-        .map((x) => {
+      .map((x) => {
         return `${x.y2},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       }
     ]
   };
@@ -274,10 +280,10 @@ const renderResData = (params) => {
       type: 'category',
       boundaryGap: false,
       data: [${modifyHistory
-        .map((x) => {
+      .map((x) => {
         return `"${x.day}",`;
-    })
-        .join('')}]
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -286,35 +292,41 @@ const renderResData = (params) => {
       {
         name: '本土新增确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
-        .map((x) => {
+      .map((x) => {
         return `${x.localAdd},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       },
       {
         name: '本土新增无症状',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
-        .map((x) => {
+      .map((x) => {
         return `${x.asymptomAdd},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       },
       {
         name: '新增境外输入',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${modifyHistory
-        .map((x) => {
+      .map((x) => {
         return `${x.importAdd},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       }
     ]
   }
@@ -361,10 +373,10 @@ const renderResData = (params) => {
       type: 'category',
       boundaryGap: false,
       data: [${cityModifyHistory
-        .map((x) => {
+      .map((x) => {
         return `"${x.day.slice(4)}",`;
-    })
-        .join('')}]
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -373,24 +385,28 @@ const renderResData = (params) => {
       {
         name: '本土新增确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${cityModifyHistory
-        .map((x) => {
+      .map((x) => {
         return `${x.confirm},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       },
       {
         name: '本土新增无症状',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${cityModifyHistory
-        .map((x) => {
+      .map((x) => {
         return `${x.noinfect},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       }
     ]
   }
@@ -590,19 +606,14 @@ const renderResData = (params) => {
       bottom: '3%',
       containLabel: true
     },
-    toolbox: {
-      feature: {
-        saveAsImage: {}
-      }
-    },
     xAxis: {
       type: 'category',
       boundaryGap: false,
       data: [${chinaNowHistoryData
-        .map((x) => {
+      .map((x) => {
         return `"${x.x}",`;
-    })
-        .join('')}]
+      })
+      .join('')}]
     },
     yAxis: {
       type: 'value'
@@ -611,48 +622,54 @@ const renderResData = (params) => {
       {
         name: '本土确诊',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
-        .map((x) => {
+      .map((x) => {
         return `${x.y1},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       },
       {
         name: '无症状感染',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
-        .map((x) => {
+      .map((x) => {
         return `${x.y3},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       },
       {
         name: '新增境外输入',
         type: 'line',
-        stack: 'Total',
-        smooth: true,
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
         data: [${chinaNowHistoryData
-        .map((x) => {
+      .map((x) => {
         return `${x.y2},`;
-    })
-        .join('')}]
+      })
+      .join('')}]
       }
     ]
   }
   
   var mapDatas = [${provinceMapData
-        .map((x) => {
+      .map((x) => {
         return `{name: '${x.name.replace('省', '')}', value: ${x.localAdd}, addList: [${x.localAddCityData
-            .map((a) => {
+          .map((a) => {
             return `{name: '${a.name}', num: ${a.num}},`;
-        })
-            .join('')}]},`;
-    })
-        .join('')}{name: '南海诸岛', value: 0, addList: []}];
+          })
+          .join('')}]},`;
+      })
+      .join('')}{name: '南海诸岛', value: 0, addList: []}];
   
   var option_map = {
     title: {
@@ -719,7 +736,7 @@ const renderResData = (params) => {
     }]
   }
 `;
-    const name = 'source';
-    (0, exports.writeMdWithContent)(name, content);
+  const name = 'source';
+  (0, exports.writeMdWithContent)(name, content);
 };
 exports.renderResData = renderResData;
