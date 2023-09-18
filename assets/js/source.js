@@ -428,7 +428,7 @@
     xAxis: {
       type: 'category',
       boundaryGap: false,
-      data: ["07.17",]
+      data: []
     },
     yAxis: {
       type: 'value'
@@ -441,7 +441,7 @@
         emphasis: {
           focus: 'series'
         },
-        data: [77937,]
+        data: []
       },
       {
         name: '无症状感染',
@@ -450,7 +450,7 @@
         emphasis: {
           focus: 'series'
         },
-        data: [371,]
+        data: []
       },
       {
         name: '新增境外输入',
@@ -459,7 +459,7 @@
         emphasis: {
           focus: 'series'
         },
-        data: [228687,]
+        data: []
       }
     ]
   }
